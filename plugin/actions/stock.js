@@ -20,6 +20,41 @@ const TREND_ICON_PATHS = {
 
 registerWindow(window, document);
 
+const TAIWAN_STOCK_TRANSLATIONS = {
+  "2330.TW": "台積電",
+  "2330": "台積電",
+  "2317.TW": "鴻海",
+  "2317": "鴻海",
+  "2454.TW": "聯發科",
+  "2454": "聯發科",
+  "2308.TW": "台達電",
+  "2308": "台達電",
+  "2382.TW": "廣達",
+  "2382": "廣達",
+  "2881.TW": "富邦金",
+  "2881": "富邦金",
+  "2882.TW": "國泰金",
+  "2882": "國泰金",
+  "5607.TW": "遠雄港",
+  "2317.TW": "鴻海",
+  "2345.TW": "智邦",
+  "2451.TW": "創見",
+  "3008.TW": "大立光",
+  "2603.TW": "長榮",
+  "2880.TW": "華南金",
+  "3265.TW": "台星科",
+  "0050.TW": "元大台灣50",
+  "0050": "元大台灣50",
+  "0056.TW": "元大高股息",
+  "0056": "元大高股息",
+  "00878.TW": "國泰永續高股息",
+  "00878": "國泰永續高股息",
+  "00919.TW": "群益台灣精選高息",
+  "00919": "群益台灣精選高息",
+  "00929.TW": "復華台灣科技優息",
+  "00929": "復華台灣科技優息",
+};
+
 class Stock {
   constructor(context, $UD) {
     this.$UD = $UD;
@@ -528,7 +563,17 @@ class Stock {
   }
 
   drawNameBlock(draw, currentData) {
-    const label = this.$UD.language === "zh_CN" ? currentData.name : currentData.code;
+    const cleanCode = String(currentData.code || "").trim().toUpperCase();
+    let label = currentData.code;
+    if (this.usesCnColorScheme()) {
+      if (currentData.kind === "index") {
+        label = currentData.name || currentData.code;
+      } else if (TAIWAN_STOCK_TRANSLATIONS[cleanCode]) {
+        label = TAIWAN_STOCK_TRANSLATIONS[cleanCode];
+      } else {
+        label = currentData.code;
+      }
+    }
     const nameConfig = this.fitTextBlock(draw, label, {
       maxWidth: 220,
       maxLines: 2,

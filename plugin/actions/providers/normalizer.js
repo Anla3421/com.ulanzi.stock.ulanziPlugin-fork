@@ -34,7 +34,7 @@ const INDEX_ALIASES = [
     market: "US",
     symbol: "DJI",
     displayCode: "^DJI",
-    nameHint: "道琼斯",
+    nameHint: "道瓊指數",
     inputs: ["道琼斯", "道指", "DJI", "USDJI", "^DJI"],
   },
   {
@@ -45,6 +45,33 @@ const INDEX_ALIASES = [
     displayCode: "^TWII",
     nameHint: "台股加權指數",
     inputs: ["^TWII", "TWII", "台股指數", "台股加權", "加權指數", "台灣加權"],
+  },
+  {
+    id: "GSPC",
+    canonical: "GSPC.INDEX",
+    market: "US",
+    symbol: "GSPC",
+    displayCode: "標普500",
+    nameHint: "S&P 500",
+    inputs: ["^GSPC", "GSPC", "S&P500", "SP500", "标普500", "標普500"],
+  },
+  {
+    id: "IXIC",
+    canonical: "IXIC.INDEX",
+    market: "US",
+    symbol: "IXIC",
+    displayCode: "^IXIC",
+    nameHint: "NASDAQ",
+    inputs: ["^IXIC", "IXIC", "NASDAQ", "纳斯达克", "那斯達克"],
+  },
+  {
+    id: "SOX",
+    canonical: "SOX.INDEX",
+    market: "US",
+    symbol: "SOX",
+    displayCode: "^SOX",
+    nameHint: "費半",
+    inputs: ["^SOX", "SOX", "費城半導體", "費半"],
   },
 ];
 
@@ -323,6 +350,9 @@ export function toYahooSymbol(normalized) {
     if (normalized.aliasId === "HSI") return "^HSI";
     if (normalized.aliasId === "DJI") return "^DJI";
     if (normalized.aliasId === "TWII") return "^TWII";
+    if (normalized.aliasId === "GSPC") return "^GSPC";
+    if (normalized.aliasId === "IXIC") return "^IXIC";
+    if (normalized.aliasId === "SOX") return "^SOX";
     return "";
   }
 

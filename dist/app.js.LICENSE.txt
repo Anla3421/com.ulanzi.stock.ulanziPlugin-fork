@@ -20,5 +20,3 @@
  */
 
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
-
-/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */

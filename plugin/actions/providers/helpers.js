@@ -37,9 +37,9 @@ export function createQuote(normalized, data = {}) {
   const percent = data.percent !== undefined ? toNumber(data.percent) : getPercent(now, yesterday);
   const code = data.code || normalized?.displayCode || normalized?.rawInput || DEFAULT_QUOTE_NAME;
   const status = data.status || "ok";
-  const fallbackName = status === "ok"
-    ? (normalized?.nameHint || code)
-    : DEFAULT_QUOTE_NAME;
+  const name = (status === "ok" && normalized?.nameHint)
+    ? normalized.nameHint
+    : (data.name || code || DEFAULT_QUOTE_NAME);
 
   return {
     input: normalized?.rawInput || "",
@@ -47,7 +47,8 @@ export function createQuote(normalized, data = {}) {
     canonical: normalized?.canonical || "",
     providerSymbol: data.providerSymbol || "",
     code,
-    name: data.name || fallbackName,
+    name,
+    kind: normalized?.kind || "stock",
     now,
     yesterday,
     high,
