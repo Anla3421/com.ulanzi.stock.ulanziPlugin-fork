@@ -1,0 +1,52 @@
+{
+	"Name" : "Cotizaciones en tiempo real",
+	"Description": "Muestra detalles de acciones en tiempo real",
+	"Actions" :
+	[
+		{
+			"Name": "Configurar acciones",
+			"Tooltip": "Introduce la informacion bursatil"
+		}
+	],
+	"Localization": {
+		"Mode":"Modo",
+		"Data Source":"Fuente de datos",
+		"China (Free)":"Fuente de China (gratis)",
+		"Yahoo Finance":"Yahoo Finance",
+		"Finnhub":"Finnhub",
+		"Source Notes":"Notas de la fuente",
+		"Uses free EastMoney quotes and supports A shares, Hong Kong stocks, US stocks, and common indexes.":"Usa cotizaciones gratuitas de EastMoney y admite acciones A, acciones de Hong Kong, acciones de EE. UU. e indices comunes.",
+		"Uses Yahoo Finance public data and may hit temporary rate limits.":"Usa datos publicos de Yahoo Finance y puede encontrar limites temporales de uso.",
+		"Requires a Finnhub API key and is best for US stocks.":"Requiere una clave API de Finnhub y es ideal para acciones de EE. UU.",
+		"Finnhub API Key":"Clave API de Finnhub",
+		"Get Finnhub API Key":"Obtener clave API de Finnhub",
+		"Single":"Una accion",
+		"Multiple":"Varias acciones",
+		"Stock Code":"Codigo bursatil",
+		"Enter the code, one stock per line":"Introduce el codigo, una accion por linea",
+		"Scroll Frequency":"Frecuencia de rotacion",
+		"Refresh Frequency":"Frecuencia de actualizacion",
+		"Background Color":"Color de fondo",
+		"Background Image":"Imagen de fondo",
+		"Select Image":"Seleccionar imagen",
+		"Stock code filling rules":"Reglas para introducir codigos bursatiles",
+		"Please fill in the stock code according to the following rules:":"Introduce el codigo bursatil segun las siguientes reglas:",
+		"Direct input examples: 600519, 000001, 700, AAPL":"Ejemplos de entrada directa: 600519, 000001, 700, AAPL",
+		"Index examples: 上证指数, 深证成指, 恒生指数, 道琼斯":"Ejemplos de indices: SSE Composite, SZSE Component, Hang Seng, Dow Jones",
+		"Compatible legacy input: SH600519, SZ000001, HK0700, USAAPL, USDJI":"Compatible con formatos antiguos: SH600519, SZ000001, HK0700, USAAPL, USDJI",
+		"10s":"10 s",
+		"30s":"30 s",
+		"1min":"1 min",
+		"5min":"5 min",
+		"10min":"10 min",
+		"15min":"15 min",
+		"30min":"30 min",
+		"1h":"1 h",
+		"600519 / 700 / AAPL":"600519 / 700 / AAPL",
+		"600519 / 700 / AAPL / 上证指数":"600519 / 700 / AAPL / SSE Composite",
+		"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: 7203.T, 2330.TW, 005930.KS":"Ejemplos con sufijo de bolsa: 7203.T, 2330.TW, 005930.KS",
+		"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: PETR4.SA, 7203.T, 2330.TW, 005930.KS":"Ejemplos con sufijo de bolsa: PETR4.SA, 7203.T, 2330.TW, 005930.KS"
+  }
+}

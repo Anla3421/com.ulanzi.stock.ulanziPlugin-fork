@@ -1,0 +1,52 @@
+{
+	"Name" : "실시간 주식 표시",
+	"Description": "주식 상세 정보를 실시간으로 표시합니다",
+	"Actions" :
+	[
+		{
+			"Name": "주식 설정",
+			"Tooltip": "주식 정보를 입력"
+		}
+	],
+	"Localization": {
+		"Mode":"모드",
+		"Data Source":"데이터 소스",
+		"China (Free)":"중국 소스(무료)",
+		"Yahoo Finance":"Yahoo Finance",
+		"Finnhub":"Finnhub",
+		"Source Notes":"소스 안내",
+		"Uses free EastMoney quotes and supports A shares, Hong Kong stocks, US stocks, and common indexes.":"무료 EastMoney 시세를 사용하며 중국 A주, 홍콩 주식, 미국 주식 및 주요 지수를 지원합니다.",
+		"Uses Yahoo Finance public data and may hit temporary rate limits.":"Yahoo Finance 공개 데이터를 사용하며 일시적인 호출 제한이 있을 수 있습니다.",
+		"Requires a Finnhub API key and is best for US stocks.":"Finnhub API Key가 필요하며 미국 주식에 가장 적합합니다.",
+		"Finnhub API Key":"Finnhub API Key",
+		"Get Finnhub API Key":"Finnhub API Key 받기",
+		"Single":"단일 종목",
+		"Multiple":"복수 종목",
+		"Stock Code":"종목 코드",
+		"Enter the code, one stock per line":"코드를 입력하세요. 한 줄에 한 종목씩 입력합니다",
+		"Scroll Frequency":"순환 주기",
+		"Refresh Frequency":"새로고침 주기",
+		"Background Color":"배경 색상",
+		"Background Image":"배경 이미지",
+		"Select Image":"이미지 선택",
+		"Stock code filling rules":"종목 코드 입력 규칙",
+		"Please fill in the stock code according to the following rules:":"아래 규칙에 따라 종목 코드를 입력하세요:",
+		"Direct input examples: 600519, 000001, 700, AAPL":"직접 입력 예시: 600519, 000001, 700, AAPL",
+		"Index examples: 上证指数, 深证成指, 恒生指数, 道琼斯":"지수 예시: 상하이종합지수, 선전성분지수, 항셍지수, 다우존스",
+		"Compatible legacy input: SH600519, SZ000001, HK0700, USAAPL, USDJI":"이전 형식도 지원: SH600519, SZ000001, HK0700, USAAPL, USDJI",
+		"10s":"10초",
+		"30s":"30초",
+		"1min":"1분",
+		"5min":"5분",
+		"10min":"10분",
+		"15min":"15분",
+		"30min":"30분",
+		"1h":"1시간",
+		"600519 / 700 / AAPL":"600519 / 700 / AAPL",
+		"600519 / 700 / AAPL / 上证指数":"600519 / 700 / AAPL / 상하이종합지수",
+		"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: 7203.T, 2330.TW, 005930.KS":"거래소 접미사 예시: 7203.T, 2330.TW, 005930.KS",
+		"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: PETR4.SA, 7203.T, 2330.TW, 005930.KS":"거래소 접미사 예시: PETR4.SA, 7203.T, 2330.TW, 005930.KS"
+  }
+}

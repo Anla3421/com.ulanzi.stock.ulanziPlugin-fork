@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+		/>
+  <title>action</title>
+  <link rel="stylesheet" href="../../libs/css/uspi.css">
+  <style>
+    .uspi-item-label{
+      width: 120px;
+    }
+    .uspi-item-note{
+      font-size: 12px;
+      line-height: 1.4;
+      color: #b7c0c9;
+      opacity: 0.78;
+    }
+    .finnhub-help-link{
+      color: #4aa3ff;
+      text-decoration: underline;
+    }
+    .uspi-item-value.no-label{
+      margin-left: 130px;
+    }
+  </style>
+</head>
+<body>
+  <div class="uspi-wrapper hidden">
+
+    <form id="property-inspector">
+
+      <div class="uspi-item" type="radio">
+        <div class="uspi-item-label"  data-localize>Mode</div>
+        <div class="uspi-item-value">
+          <div class="uspi-item-child">
+            <input id="mode_single" name="mode" type="radio" value="single" checked>
+            <label for="mode_single"><span></span><ud data-localize>Single</ud></label>
+          </div>
+          <div class="uspi-item-child">
+            <input id="mode_multile" name="mode" type="radio" value="multiple">
+            <label for="mode_multile"><span></span><ud  data-localize>Multiple</ud></label>
+          </div>
+        </div>
+      </div>
+
+      <div type="select" class="uspi-item">
+        <div class="uspi-item-label" data-localize>Data Source</div>
+        <select class="uspi-item-value" id="provider" name="provider">
+          <option value="china" data-localize>China (Free)</option>
+          <option value="yahoo" data-localize>Yahoo Finance</option>
+          <option value="finnhub" data-localize>Finnhub</option>
+        </select>
+      </div>
+
+      <div class="uspi-item">
+        <div class="uspi-item-value no-label" >
+          <div id="provider_notice_china" class="uspi-item-note" data-localize>Uses free EastMoney quotes and supports A shares, Hong Kong stocks, US stocks, and common indexes.</div>
+          <div id="provider_notice_yahoo" class="uspi-item-note" data-localize style="display: none;">Uses Yahoo Finance public data and may hit temporary rate limits.</div>
+          <div id="provider_notice_finnhub" class="uspi-item-note" data-localize style="display: none;">Requires a Finnhub API key and is best for US stocks.</div>
+        </div>
+      </div>
+
+      <div class="uspi-item" id="finnhub_api_key_container" style="display: none;">
+        <div class="uspi-item-label" data-localize>Finnhub API Key</div>
+        <input class="uspi-item-value" id="finnhub_api_key" name="finnhub_api_key" type="text">
+      </div>
+
+      <div class="uspi-item" id="finnhub_api_key_help" style="display: none;">
+        <div class="uspi-item-value no-label uspi-item-note">
+          <a id="finnhub_api_key_link" class="finnhub-help-link" href="#" data-localize>Get Finnhub API Key</a>
+        </div>
+      </div>
+
+      <div id="mode_single_container" >
+        <div class="uspi-item" >
+          <div class="uspi-item-label" data-localize>Stock Code</div>
+          <input class="uspi-item-value" id="code_single" name="code_single" type="text" placeholder="600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS" data-localize>
+        </div>
+      </div>
+      <div id="mode_multiple_container" style="display: none;">
+        <div class="uspi-item">
+          <div class="uspi-item-label" style="align-self: flex-start;" data-localize>Stock Code</div>
+          <textarea class="uspi-item-value" placeholder="Enter the code, one stock per line" id="code_multiple" name="code_multiple_before" rows="5" cols="33" data-localize></textarea>
+        </div>
+  
+  
+        <div type="range" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Scroll Frequency</div>
+          <div class="uspi-item-value">
+            <input class="floating-tooltip" id="rotate-duration" type="range" min="5" max="100" value="10" name="rotate_duration" />
+            <span id="rotate-duration-value">10s</span>
+          </div>
+        </div>
+      </div>
+
+      <div type="select" class="uspi-item">
+        <div class="uspi-item-label" data-localize>Refresh Frequency</div>
+        <select class="uspi-item-value" id="refresh-duration"  name="refresh_duration">
+          <option value="10" data-localize>10s</option>
+          <option value="30" data-localize>30s</option>
+          <option value="60" data-localize selected>1min</option>
+          <option value="300" data-localize>5min</option>
+          <option value="600" data-localize>10min</option>
+          <option value="900" data-localize>15min</option>
+          <option value="1800" data-localize>30min</option>
+          <option value="3600" data-localize>1h</option>
+        </select>
+      </div>
+
+
+      <div class="uspi-item" type="color">
+        <div class="uspi-item-label"  data-localize>Background Color</div>
+        <input class="uspi-item-value" id="bgColor" name="bgColor" type="color" value="#000000">
+      </div>
+
+      <div class="uspi-item"  type="file">
+        <div class="uspi-item-label"  data-localize>Background Image</div>
+        <div class="uspi-item-value" >
+            <input class="uspi-file-info" id="bgImgFileInfo"/>
+            <div class="uspi-file-label">
+              <img src="../../libs/assets/u_file.svg" id="bgImgFileLabel" />
+            </div>
+        </div>
+      </div>
+
+
+    </form>
+
+    <details>
+      <summary data-localize>Stock code filling rules</summary>
+      <p data-localize>Please fill in the stock code according to the following rules:</p>
+
+      <ul>
+        <li data-localize>Direct input examples: 600519, 000001, 700, AAPL</li>
+        <li data-localize>Exchange-suffixed examples: PETR4.SA, 7203.T, 2330.TW, 005930.KS</li>
+        <li data-localize>Index examples: 上证指数, 深证成指, 恒生指数, 道琼斯</li>
+        <li data-localize>Compatible legacy input: SH600519, SZ000001, HK0700, USAAPL, USDJI</li>
+      </ul>
+    </details>
+
+  </div>
+
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+
+
+
+
+  <script src="./inspector.js"></script>
+  
+</body>
+</html>

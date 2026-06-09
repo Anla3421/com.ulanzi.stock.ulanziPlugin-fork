@@ -1,0 +1,42 @@
+{
+    "Version": "1.1.5",
+    "Author": "Ulanzi",
+    "Name": "Stock",
+    "Description": "Stock Plugin",
+    "Icon": "assets/icons/pluginIcon.png",
+    "Category": "Stock",
+    "CategoryIcon": "assets/icons/category.png",
+    "CodePath": "dist/app.js",
+    "Type": "JavaScript",
+    "PrivateAPI": true,
+    "SupportedInMultiActions": false,
+    "UUID": "com.ulanzi.ulanzideck.stock",
+    "Actions":[
+        {
+            "Name": "ConfigStock",
+            "Icon": "assets/icons/actionIcon.png",
+            "PropertyInspectorPath":"property-inspector/config/inspector.html",
+            "state": 0,
+            "States": [
+            {
+                "Name": "Default",
+                "Image":"assets/icons/actionDefaultImage.png"
+            }
+            ],
+            "Tooltip": "Config Stock Plugin",
+            "UUID": "com.ulanzi.ulanzideck.stock.config",
+			"SupportedInMultiActions": false
+        }
+    ],
+    "OS": [
+        {
+        "Platform": "mac",
+        "MinimumVersion": "10.15"
+        },
+        {
+        "Platform": "windows",
+        "MinimumVersion": "10"
+        }
+    ],
+    "Software": { "MinimumVersion": "5.0" }
+}

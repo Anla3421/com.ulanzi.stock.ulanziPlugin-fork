@@ -1,0 +1,52 @@
+{
+	"Name" : "Cotacoes em tempo real",
+	"Description": "Mostra detalhes das acoes em tempo real",
+	"Actions" :
+	[
+		{
+			"Name": "Configurar acoes",
+			"Tooltip": "Introduzir informacao da acao"
+		}
+	],
+	"Localization": {
+		"Mode":"Modo",
+		"Data Source":"Fonte de dados",
+		"China (Free)":"Fonte da China (gratuita)",
+		"Yahoo Finance":"Yahoo Finance",
+		"Finnhub":"Finnhub",
+		"Source Notes":"Notas da fonte",
+		"Uses free EastMoney quotes and supports A shares, Hong Kong stocks, US stocks, and common indexes.":"Utiliza cotacoes gratuitas da EastMoney e suporta acoes A, acoes de Hong Kong, acoes dos EUA e indices comuns.",
+		"Uses Yahoo Finance public data and may hit temporary rate limits.":"Utiliza dados publicos do Yahoo Finance e pode sofrer limitacoes temporarias de taxa.",
+		"Requires a Finnhub API key and is best for US stocks.":"Requer uma chave API da Finnhub e e mais indicado para acoes dos EUA.",
+		"Finnhub API Key":"Chave API da Finnhub",
+		"Get Finnhub API Key":"Obter chave API da Finnhub",
+		"Single":"Uma acao",
+		"Multiple":"Varias acoes",
+		"Stock Code":"Codigo da acao",
+		"Enter the code, one stock per line":"Introduza o codigo, uma acao por linha",
+		"Scroll Frequency":"Frequencia de rotacao",
+		"Refresh Frequency":"Frequencia de atualizacao",
+		"Background Color":"Cor de fundo",
+		"Background Image":"Imagem de fundo",
+		"Select Image":"Selecionar imagem",
+		"Stock code filling rules":"Regras de preenchimento do codigo da acao",
+		"Please fill in the stock code according to the following rules:":"Preencha o codigo da acao de acordo com as seguintes regras:",
+		"Direct input examples: 600519, 000001, 700, AAPL":"Exemplos de entrada direta: 600519, 000001, 700, AAPL",
+		"Index examples: 上证指数, 深证成指, 恒生指数, 道琼斯":"Exemplos de indices: SSE Composite, SZSE Component, Hang Seng, Dow Jones",
+		"Compatible legacy input: SH600519, SZ000001, HK0700, USAAPL, USDJI":"Compativel com o formato antigo: SH600519, SZ000001, HK0700, USAAPL, USDJI",
+		"10s":"10 s",
+		"30s":"30 s",
+		"1min":"1 min",
+		"5min":"5 min",
+		"10min":"10 min",
+		"15min":"15 min",
+		"30min":"30 min",
+		"1h":"1 h",
+		"600519 / 700 / AAPL":"600519 / 700 / AAPL",
+		"600519 / 700 / AAPL / 上证指数":"600519 / 700 / AAPL / SSE Composite",
+		"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: 7203.T, 2330.TW, 005930.KS":"Exemplos com sufixo da bolsa: 7203.T, 2330.TW, 005930.KS",
+		"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS":"600519 / 700 / AAPL / PETR4.SA / 7203.T / 2330.TW / 005930.KS",
+  "Exchange-suffixed examples: PETR4.SA, 7203.T, 2330.TW, 005930.KS":"Exemplos com sufixo da bolsa: PETR4.SA, 7203.T, 2330.TW, 005930.KS"
+  }
+}
