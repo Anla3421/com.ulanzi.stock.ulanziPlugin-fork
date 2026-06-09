@@ -63,7 +63,8 @@ class Stock {
   }
 
   usesCnColorScheme() {
-    return String(this.$UD?.language || "").trim() === "zh_CN";
+    const lang = String(this.$UD?.language || "").trim();
+    return lang.startsWith("zh") || lang.startsWith("ja") || lang.startsWith("ko");
   }
 
   getTrendColors(quote) {

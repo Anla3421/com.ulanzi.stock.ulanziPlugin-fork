@@ -37,6 +37,15 @@ const INDEX_ALIASES = [
     nameHint: "道琼斯",
     inputs: ["道琼斯", "道指", "DJI", "USDJI", "^DJI"],
   },
+  {
+    id: "TWII",
+    canonical: "TWII.INDEX",
+    market: "TW",
+    symbol: "TWII",
+    displayCode: "^TWII",
+    nameHint: "台股加權指數",
+    inputs: ["^TWII", "TWII", "台股指數", "台股加權", "加權指數", "台灣加權"],
+  },
 ];
 
 const INDEX_ALIAS_MAP = new Map();
@@ -313,6 +322,7 @@ export function toYahooSymbol(normalized) {
     if (normalized.aliasId === "SZCI") return "399001.SZ";
     if (normalized.aliasId === "HSI") return "^HSI";
     if (normalized.aliasId === "DJI") return "^DJI";
+    if (normalized.aliasId === "TWII") return "^TWII";
     return "";
   }
 
